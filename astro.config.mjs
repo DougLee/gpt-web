@@ -5,6 +5,8 @@ import { presetUno } from 'unocss'
 import presetAttributify from '@unocss/preset-attributify'
 import presetTypography from '@unocss/preset-typography'
 import solidJs from '@astrojs/solid-js'
+import node from '@astrojs/node'
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +20,9 @@ export default defineConfig({
     }),
     solidJs()
   ],
+  outDir: './dist',
   output: 'server',
-  adapter: vercel()
+  adapter: node({
+    mode: 'standalone'
+  }),
 });
