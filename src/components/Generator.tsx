@@ -77,7 +77,7 @@ export default () => {
     <div my-6>
       <For each={messageList()}>{(message) => <MessageItem role={message.role} message={message.content} />}</For>
       { currentAssistantMessage() && <MessageItem role="assistant" message={currentAssistantMessage} /> }
-      <Show when={!loading()} fallback={() => <div class="h-12 my-4 flex items-center justify-center bg-slate bg-op-15 text-slate rounded-sm">AI is thinking...</div>}>
+      <Show when={!loading()} fallback={() => <div class="h-12 my-4 flex items-center justify-center bg-slate bg-op-15 text-slate rounded-sm">墨墨AI is thinking...</div>}>
         <div class="my-4 flex items-center gap-2">
           <input
             ref={inputRef!}
