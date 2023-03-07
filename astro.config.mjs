@@ -20,9 +20,11 @@ export default defineConfig({
     }),
     solidJs()
   ],
-  outDir: './dist',
+  // outDir: './dist',
   output: 'server',
-  adapter: node({
-    mode: 'standalone'
-  }),
+  adapter: vercel()
+  // server: { host: '0.0.0.0', port: 8888},
+  // adapter: node({
+  //   mode: 'standalone'
+  // }),
 });
